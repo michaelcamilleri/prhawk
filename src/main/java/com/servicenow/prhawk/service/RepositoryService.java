@@ -60,6 +60,7 @@ public class RepositoryService {
         Response response = repoTarget.path(HtmlUtils.htmlEscape(path))
                 .request()
                 .header(HttpHeaders.AUTHORIZATION, "Basic " + token)
+                .accept(mediaType)
                 .get();
         List<Repository> repositories = new ArrayList<>(response.readEntity(new GenericType<List<Repository>>(){}));
 
