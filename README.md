@@ -1,4 +1,4 @@
-## PR Hawk [![Master Build](https://github.com/michaelcamilleri/prhawk/workflows/Master%20Build/badge.svg)](https://github.com/michaelcamilleri/prhawk/actions?query=workflow%3A%22Master+Build%22)
+## PR Hawk [![Master Build](https://github.com/michaelcamilleri/prhawk/workflows/Master%20Build/badge.svg?branch=master)](https://github.com/michaelcamilleri/prhawk/actions?query=workflow%3A%22Master+Build%22)
 
 ### Setup
 
