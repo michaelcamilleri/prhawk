@@ -27,5 +27,5 @@ mvn spring-boot:run
 
 Or access the user page directly (no styling):
 - List all user repositories: http://localhost:8080/user/{username}
-- List all user repositories and PRs: http://localhost:8080/user/{username}?lisPRs=true
+- List all user repositories and PRs: http://localhost:8080/user/{username}?listPRs=true
 - Get first page of user repositories, limit to 10 results per page: http://localhost:8080/user/{username}?page=1&perPage=10
