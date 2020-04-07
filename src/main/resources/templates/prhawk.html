@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>PR Hawk</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/prhawk.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="images/logo.png" class="logo" alt="PR Hawk logo">
+    </div>
+    <div class="main">
+        <div id="search">
+            <span><input type="text" id="username-input" placeholder="Username"/></span>
+            <span class="small-text"><input type="checkbox" id="list-prs"/>List PRs</span>
+            <span><input type="button" id="show-repos-button" value="Show Repos" onclick="getRepos()"/></span>
+            <span class="small-text" id="username-error"></span>
+            <span id="loader"></span>
+        </div>
+        <div id="results">
+        </div>
+    </div>
+</body>

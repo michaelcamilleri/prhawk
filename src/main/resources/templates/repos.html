@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div th:if="${#lists.isEmpty(repos)}" class="repos-container">
+    <span>No repositories found</span>
+</div>
+
+<ol class="list">
+    <li th:each="repo, stats : ${repos}">
+        <a th:href="${repo.url}" th:target="_blank">
+            <span th:if="${repo.pullRequestCount} == 1" th:text="${repo.name} + ' (' + ${repo.pullRequestCount} + ' PR)'" ></span>
+            <span th:unless="${repo.pullRequestCount} == 1" th:text="${repo.name} + ' (' + ${repo.pullRequestCount} + ' PRs)'" ></span>
+        </a>
+        <ul>
+            <li th:each="pr : ${repo.pullRequests}">
+                <span th:text="${pr.number} + ': '"></span>
+                <a th:href="${pr.url}" th:target="_blank">
+                    <span th:text="${pr.title}"></span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ol>
